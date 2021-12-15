@@ -3,7 +3,7 @@
   f <- as.formula(paste(YY , " ~ ", XX ))
   
   fit_cols <- paste0(YY, "_" ,c("fit", "lwr", "upr"))
-  Prediction_Level <- 0.997
+  Prediction_Level <- 0.9973
   ByList <- c("Group")
   
   setkeyv(final_select, ByList)
