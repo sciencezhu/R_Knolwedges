@@ -4,7 +4,7 @@
 plot(cookd(lm(prestige ~ income + education, data=Duncan)))
 
 
-
+#############################################################################################################################################################
 ## Studentized Residual or the jackknifed residuals
 ## https://stats.stackexchange.com/questions/204708/is-studentized-residuals-v-s-standardized-residuals-in-lm-model
 ## https://www.statology.org/studentized-residuals-in-r/
@@ -24,4 +24,12 @@ stud_resids <- studres(model)
 #view first three studentized residuals
 head(stud_resids, 3)
 
+##############################################################################################################################################################
+## Mahalanobis Distance and Multivariate Outlier Detection in R
+## Finding outliers that breaks linearity
+## https://towardsdatascience.com/mahalonobis-distance-and-outlier-detection-in-r-cb9c37576d7d
+
+mahalanobis(x, center, cov, inverted = FALSE, ...)
+
+## Returns the squared Mahalanobis distance of all rows in x and the vector \(\mu\) = center with respect to \(\Sigma\) = cov. This is (for vector x) defined as $$D^2 = (x - ## \mu)' \Sigma^{-1} (x - \mu)$$
 
