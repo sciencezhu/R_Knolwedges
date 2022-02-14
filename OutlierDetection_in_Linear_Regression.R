@@ -33,3 +33,13 @@ mahalanobis(x, center, cov, inverted = FALSE, ...)
 
 ## Returns the squared Mahalanobis distance of all rows in x and the vector \(\mu\) = center with respect to \(\Sigma\) = cov. This is (for vector x) defined as $$D^2 = (x - ## \mu)' \Sigma^{-1} (x - \mu)$$
 
+
+
+
+##  https://rpubs.com/jjsuarestra99/mahalanobis
+##  Mahalanobis Distance and its Limitations
+##  This one has methods of how to improve the mahalanobis methods.
+
+
+
+
