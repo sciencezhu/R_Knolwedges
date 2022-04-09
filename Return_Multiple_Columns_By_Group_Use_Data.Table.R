@@ -36,3 +36,19 @@ x[ , c("mean", "sum") := list(mean(b), sum(b)), by = a][]
 
 
 
+############  https://intellipaat.com/community/12994/assign-multiple-columns-using-in-data-table-by-group
+library(data.table)
+
+f <- function(x) {list("hi", "hello")}
+x <- data.table(id = 1:10)
+x[ , c("col1", "col2") := f(), by = id][]
+
+
+## For example
+Multiple_Function <- function(x) {
+    list(month(x), day(x))  
+}
+DT[, c("Month", "Day"):=Multiple_Function(as.Date(get("Date"), format="%B-%d"))]  ##Where Date is a column name of this DT data.table.
+
+
+
