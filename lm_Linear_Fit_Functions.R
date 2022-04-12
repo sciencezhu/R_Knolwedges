@@ -24,3 +24,20 @@ d[, .(
 # 8:    A3D4 0.37219027  0.349768492 0.009301843 0.0006614213 0.0003442445
 # 9:    A3G5 0.17227383  0.150491566 0.025994831 0.0006658466 0.0077413595
 #10:    A3D5 0.04411669 -0.008987936 0.014341399 0.0001084626 0.3741011769
+
+
+
+#### How to fit with fixed slope.
+##  https://stat.ethz.ch/pipermail/r-help/2010-October/257151.html
+## Yes.  The simplest way is to fit
+lm(y - a*x ~ 1)
+#which will give you the estimate of b, its standard error, etc.
+#An alternative is to use an offset argument or an offset() expression in the model formula
+lm(y ~ 1 + offset(a*x))
+## Can use below to generate the above formula.
+
+f <- as.formula(paste(YY, "~ 1 + ", "offset(", XX, ")"))  ## where we set a to the value of 1.
+
+
+
+
