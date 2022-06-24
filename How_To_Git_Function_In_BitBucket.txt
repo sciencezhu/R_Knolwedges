@@ -1,0 +1,18 @@
+git branch      --  Show all branches under local and which branch you are in (a star at the begining of the branch name).
+
+git status      --  Show the status of the current selected branch
+
+git checkout  branch_name    -- this will goes to the "branch_name" branch
+
+git merge Another_Branch_name  -- this will merge from the Another_Branch_name into your current activated branch "branch_name".
+
+
+git push -u Base_Branch_Name Branch_Name   -- this will push from local to remote.
+
+git commit -m"comments"  -- this will commit the changes with the "comments"
+
+
+When we made changes on the dev branches, we can locally merge them into the Production branch, and then push the two branches into remote, one by one, respectively.
+
+
+
